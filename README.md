@@ -1,0 +1,368 @@
+# Monadtime — TIME Protocol on Monad
+
+## Public Overview
+
+Monadtime is the Monad implementation of TIME Protocol.
+
+TIME Protocol is a time-based liquidity, emissions, and participation system designed around a simple permanent rhythm:
+
+```text
+150 TIME per Monad block forever
+```
+
+The protocol does not rely on a terminal max supply, temporary hype cycles, or admin-controlled minting. Instead, TIME uses a fixed base rhythm and adaptive protocol mechanics to make emissions, liquidity, freezing, treasury growth, and governance move with time.
+
+Monadtime brings this design to Monad, using Monad block time and Monad epochs as the operational clock of the protocol.
+
+---
+
+## What TIME Protocol Is
+
+TIME Protocol is a decentralized protocol built around four core ideas:
+
+```text
+1. Time is continuous.
+2. Emissions are rhythmic, not arbitrary.
+3. Long-term commitment should receive stronger protocol weight.
+4. Protocol-owned liquidity should strengthen the system, not control users.
+```
+
+The base TIME rhythm is fixed:
+
+```text
+150 TIME per Monad block
+```
+
+This base rhythm is not changed by admins, councils, or DAO minting.
+
+The Time Wave can adjust effective emission speed around market conditions, but it does not rewrite the base rhythm.
+
+---
+
+## What Monadtime Is
+
+Monadtime is the deployment and implementation layer of TIME Protocol for Monad.
+
+It uses:
+
+```text
+Monad blocks as the base clock
+Monad epochs as the protocol rhythm window
+TIME/MON as the native liquidity pair
+Frozen TIME and Eternal Frozen TIME for long-term TIME/MON LP commitment
+Time Wave mechanics for adaptive emission pacing
+Guardian and DAO structures for later protocol maturity
+```
+
+The target is to make TIME a native Monad-aligned protocol where liquidity, emissions, user commitment, and governance all move from the same clock.
+
+---
+
+## Native Pair
+
+The native pair of TIME Protocol on Monad is:
+
+```text
+TIME/MON
+```
+
+Genesis liquidity starts from the public launch ratio:
+
+```text
+1 MON : 30 TIME
+```
+
+This initial ratio is part of the launch doctrine and is intended to give users and liquidity providers a clear public reference point.
+
+---
+
+## Emissions
+
+TIME emissions follow a permanent base rhythm:
+
+```text
+150 TIME per Monad block forever
+```
+
+The protocol does not use:
+
+```text
+admin minting
+DAO minting
+terminal max supply
+manual supply resets
+creator override minting
+```
+
+The goal is to make TIME predictable at the base layer while still allowing adaptive market response through protocol rules.
+
+---
+
+## Time Wave
+
+Time Wave is the adaptive emission pacing layer.
+
+It does not change the base rhythm.
+
+It adjusts effective emission speed based on TIME/MON conditions.
+
+Current doctrine uses a target balance zone:
+
+```text
+25 to 35 TIME per MON
+```
+
+When TIME is too expensive relative to MON, Time Wave can slow effective emissions.
+
+When TIME is too cheap relative to MON, Time Wave can expand effective emissions.
+
+When TIME/MON is inside the target zone, Time Wave remains neutral.
+
+---
+
+## Monad Epoch Rhythm
+
+Monadtime uses a protocol epoch standard of:
+
+```text
+1 Monad epoch = 50,000 Monad blocks
+```
+
+Major protocol operations are designed to follow this rhythm.
+
+Examples:
+
+```text
+Time Wave movement
+protocol fee distribution
+auto-compound eligibility
+protocol-owned LP locking
+future governance accounting windows
+```
+
+This keeps the protocol operating in predictable time cycles instead of reacting randomly block by block.
+
+---
+
+## Frozen TIME and Eternal Frozen TIME
+
+TIME Protocol rewards long-term commitment through TIME/MON LP freezing mechanics.
+
+Public names:
+
+```text
+Frozen TIME
+Eternal Frozen TIME
+```
+
+These names refer to committed TIME/MON LP positions.
+
+They do not mean single-token frozen TIME balances.
+
+The underlying committed positions are:
+
+```text
+Frozen TIME = user-owned frozen TIME/MON LP
+Eternal Frozen TIME = user-owned eternal frozen TIME/MON LP
+```
+
+Frozen TIME and Eternal Frozen TIME represent stronger alignment with the protocol than liquid positions.
+
+Eternal Frozen TIME is designed for permanent commitment.
+
+Eternal Frozen TIME cannot thaw.
+
+---
+
+## Protocol Fee Doctrine
+
+Protocol fees follow the active public doctrine:
+
+```text
+1/3 burn
+1/3 Eternal TIME LP
+1/3 TIME Treasury
+```
+
+This means protocol fees are used to:
+
+```text
+reduce circulating TIME through burns
+strengthen protocol liquidity through Eternal TIME LP
+build TIME Treasury resources
+```
+
+The Eternal TIME LP stream is protocol-owned and inaccessible.
+
+It is not claimable by normal LP providers.
+
+It is not a voting source.
+
+---
+
+## Auto-Compound
+
+Auto-compound helps eligible users compound their TIME participation once per Monad epoch.
+
+Current doctrine:
+
+```text
+AUTO_COMPOUND_INTERVAL = 50,000 blocks
+```
+
+The auto-compound fee follows the same protocol fee doctrine:
+
+```text
+3% total auto-compound fee
+1% burn
+1% Eternal TIME LP
+1% TIME Treasury
+```
+
+---
+
+## User Fee Claims
+
+TIME users can claim only fees generated by their own eligible positions.
+
+Eligible user claim sources are:
+
+```text
+Frozen TIME
+Eternal Frozen TIME
+```
+
+Where:
+
+```text
+Frozen TIME = user-owned frozen TIME/MON LP
+Eternal Frozen TIME = user-owned eternal frozen TIME/MON LP
+```
+
+Users cannot claim:
+
+```text
+protocol-owned LP fees
+Eternal TIME LP fees
+treasury LP fees
+fees generated by another user position
+fees generated by protocol inventory
+```
+
+This keeps user yield tied to user-owned TIME/MON LP commitment.
+
+---
+
+## Governance Direction
+
+TIME Protocol is designed to mature toward DAO governance.
+
+The intended rule is that only real committed users should define governance weight.
+
+Eligible DAO voting power includes only:
+
+```text
+user-owned Frozen TIME
+user-owned Eternal Frozen TIME
+```
+
+Where both names mean user-owned committed TIME/MON LP positions.
+
+Excluded from DAO voting power:
+
+```text
+Eternal TIME LP
+protocol-owned LP
+protocol-owned Eternal Frozen TIME LP
+treasury LP
+burned TIME
+liquid TIME
+inactive wallets
+```
+
+This prevents protocol-owned liquidity, burned supply, or inactive liquid balances from making the 80% approval threshold impossible or artificial.
+
+---
+
+## Guardian Council Direction
+
+The Time Guardian Council is designed as a proposal and safety layer.
+
+The council may create and update proposals for DAO voting.
+
+The council does not exist to override core TIME law.
+
+Long-term doctrine:
+
+```text
+Guardians propose.
+TIME DAO approves.
+TIME law remains protected.
+```
+
+---
+
+## Protected TIME Laws
+
+TIME Protocol is built around protected laws:
+
+```text
+No terminal max supply.
+No admin mint.
+No DAO mint.
+Base rhythm remains 150 TIME per Monad block forever.
+TIME/MON is the native pair.
+Initial TIME Liquidity Event starts at 1 MON : 30 TIME.
+Time Wave controls effective emission speed, not the base rhythm.
+After Genesis, APR is display-only and cannot control emissions.
+Every protocol fee follows the active fee doctrine.
+Frozen TIME and Eternal Frozen TIME are the only eligible boosted user positions.
+Frozen TIME means frozen TIME/MON LP.
+Eternal Frozen TIME means eternal frozen TIME/MON LP.
+Eternal Frozen TIME cannot thaw.
+Protocol Eternal LP cannot withdraw, thaw, or transfer out.
+No creator override of core law.
+No Council override of core law.
+No DAO override of core law.
+```
+
+---
+
+## Why Monadtime Matters
+
+Monadtime is designed for users and investors who believe that crypto protocols should have:
+
+```text
+clear public rules
+predictable base emissions
+adaptive market response
+long-term user commitment
+protocol-owned liquidity that strengthens the system
+DAO voting based on committed users, not protocol-owned balances
+```
+
+Monad gives TIME Protocol a high-performance environment where the protocol clock can become a native part of the user experience.
+
+---
+
+## Public Statement
+
+```text
+TIME is not only a token.
+TIME is a protocol clock.
+Monadtime is TIME Protocol running on Monad.
+```
+
+The protocol is still under active development.
+
+Public materials in this folder are explanatory and should be read together with the source code, phase files, doctrine files, and future audits.
+
+---
+
+## Development Status
+
+Monadtime is being developed through phased implementation.
+
+Each phase must preserve TIME law, update tests and documentation, and complete a self-review before merge.
+
+The repository source code remains the source of truth for implementation details.
