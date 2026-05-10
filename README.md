@@ -4,9 +4,9 @@
 
 Monadtime is the Monad implementation of TIME Protocol.
 
-TIME Protocol is being designed as a time-based crypto economic system where emissions, liquidity, long-term participation, and future governance are coordinated around a protocol clock.
+TIME Protocol is being designed as a time-based crypto economic system where emissions, liquidity, privacy, long-term participation, and future governance are coordinated around time itself.
 
-The goal is to build a protocol that feels native to Monad: fast, rhythmic, transparent, and aligned with users who commit to the system over time.
+The goal is to build a protocol that feels native to Monad: fast, rhythmic, private-first, transparent at the protocol level, and aligned with users who commit to the system over time.
 
 This public README explains the high-level direction of Monadtime without exposing the full internal mechanism design.
 
@@ -23,6 +23,7 @@ The system is designed around:
 ```text
 continuous protocol rhythm
 native Monad alignment
+privacy-first participation
 long-term user commitment
 adaptive liquidity behavior
 protocol-owned liquidity strength
@@ -31,7 +32,7 @@ future governance by committed users
 
 Monadtime is not intended to be only a token launch.
 
-It is intended to become a protocol layer where participation, liquidity, rewards, and governance all connect to time-based commitment.
+It is intended to become a protocol layer where participation, liquidity, privacy, rewards, and governance all connect to time-based commitment.
 
 ---
 
@@ -43,10 +44,11 @@ At a high level, TIME Protocol is built around these principles:
 
 ```text
 1. Time should be continuous.
-2. Emissions should be predictable at the base layer.
-3. Protocol behavior should adapt to market conditions without arbitrary admin control.
-4. Long-term committed users should matter more than short-term passive holders.
-5. Protocol-owned liquidity should strengthen the system, not dominate users.
+2. User privacy should be protected.
+3. Emissions should be predictable at the base layer.
+4. Protocol behavior should adapt to market conditions without arbitrary admin control.
+5. Long-term committed users should matter more than short-term passive holders.
+6. Protocol-owned liquidity should strengthen the system, not dominate users.
 ```
 
 The detailed formulas, thresholds, ratios, and execution rules are part of the private implementation and doctrine layer while the protocol is under development.
@@ -63,23 +65,71 @@ Monadtime is designed to use Monad as the base chain for:
 high-frequency protocol interaction
 fast liquidity operations
 future user-facing TIME applications
+privacy-first participation paths
 long-term on-chain participation
 native community and ecosystem growth
 ```
 
-The protocol is being built so that Monad is not only where TIME lives, but where TIME operates as a native economic clock.
+The protocol is being built so that Monad is not only where TIME lives, but where TIME operates as a native time-based economy.
 
 ---
 
 ## Core Public Concepts
 
-### Protocol Clock
+### TIME Protocol
 
-Monadtime is organized around a protocol clock.
+At the center of Monadtime is TIME Protocol.
 
-This means key protocol actions are intended to follow defined time cycles instead of being random, manually triggered, or purely speculative.
+TIME Protocol means the system is not built only around random actions, manual decisions, or short-term reactions.
 
-The clock gives users and investors a way to understand that TIME is designed around rhythm and continuity.
+It is built around time.
+
+Liquidity can move with time.
+
+Participation can grow with time.
+
+Protocol-owned strength can compound with time.
+
+Governance can mature with time.
+
+Privacy can protect what users do with their time.
+
+This is the foundation of Monadtime.
+
+Primal DeFi begins when the protocol is designed around TIME.
+
+### Privacy First
+
+No one should know what you do with your TIME.
+
+Monadtime is designed with a privacy-first direction.
+
+The goal is to let users interact with TIME Protocol without forcing every action to become a directly linkable public trail.
+
+Future TIME privacy paths are intended to support:
+
+```text
+enter privately
+swap privately
+withdraw privately
+use non-custodial relayers
+avoid direct deposit-to-withdrawal linkability
+```
+
+Privacy does not mean hidden protocol behavior.
+
+The public principle is:
+
+```text
+Private user path.
+Public protocol truth.
+```
+
+Users deserve privacy.
+
+The protocol still requires integrity.
+
+Privacy should protect users without weakening protocol accounting, security, or TIME law.
 
 ### Adaptive Emissions
 
@@ -164,6 +214,7 @@ Monadtime is being built for people who believe that crypto protocols should hav
 
 ```text
 clear principles
+privacy-first user paths
 long-term economic direction
 strong liquidity foundations
 reduced dependency on arbitrary admin control
@@ -185,7 +236,10 @@ Publicly shared:
 
 ```text
 Monadtime is TIME Protocol on Monad.
-TIME is designed around a protocol clock.
+TIME is designed around time-based protocol rhythm.
+The system is privacy-first.
+No one should know what you do with your TIME.
+Future TIME paths should support private entry, private swaps, and private withdrawals.
 The system values long-term commitment.
 Native liquidity is central to the design.
 Protocol-owned liquidity supports resilience.
@@ -204,6 +258,9 @@ specific adjustment bands
 specific epoch execution details
 specific governance thresholds
 internal implementation order
+private circuit design
+proof architecture
+relayer implementation details
 ```
 
 This protects the protocol from being copied before the full system is ready.
@@ -227,6 +284,7 @@ audits
 launch documentation
 user guides
 governance documentation
+privacy documentation
 ```
 
 ---
@@ -235,8 +293,8 @@ governance documentation
 
 ```text
 TIME is not only a token.
-TIME is a protocol clock.
+TIME is the protocol of time.
 Monadtime is TIME Protocol running on Monad.
 ```
 
-Monadtime is building a time-based protocol economy for the Monad ecosystem.
+Monadtime is building a privacy-first, time-based protocol economy for the Monad ecosystem.
